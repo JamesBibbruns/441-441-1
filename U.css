@@ -138,9 +138,6 @@ button {
 button:hover {
   background-color: #4cae4c;
 }
-main {
-  padding: 2em;
-}
 
 .search-section, .instructor-callout, .learn-daily {
   margin-bottom: 2em;
@@ -299,4 +296,39 @@ article p {
         }
         p {
             line-height: 1.6;
+        }
+.banner {
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 使用transform居中 */
+            width: 80%; /* Adjusted width */
+            height: 100%; /* Adjusted height */
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: slide 1.6s ease-in-out infinite;
+        }
+
+        @keyframes slide {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            45% {
+                transform: translateX(-100%);
+            }
+        }
+main {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            position: relative;
+            height: 500px; 
         }
