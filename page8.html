@@ -68,6 +68,7 @@
             <li><a href="page6.html">About</a></li>
             <li><a href="page9.html">Courseware</a></li>
             <li><a href="page8.html">Enquiry</a></li>
+            <li><a href="page7.html">Showcase</a></li>
         </ul>
     </nav>
 <div class="form-container">
@@ -85,19 +86,27 @@
             <label for="course">Course of Interest:</label>
             <select id="course" name="course" required>
                 <option value="">--Please select a course--</option>
-                <!-- Populate with the list of available courses -->
                 <option value="course1">Web Development</option>
                 <option value="course2">Cybersecurity</option>
                 <option value="course3">Data Analysis</option>
-                <!-- Add more courses as needed -->
             </select>
             <div class="form-group">
                 <label for="name">Age:</label>
-                <input type="text" id="name" name="name" required>
+                    <input type="number" id="age" name="age" required min="1" max="100">
         </div>
         <div class="form-group">
             <label for="name">Major:</label>
-            <input type="text" id="name" name="name" required>
+            <select id="course" name="course" required>
+                <option value="">--Please select a Major</option>
+                <option value="course1">ICTCT666</option>
+                <option value="course2">ICTCT888</option>
+                <option value="course2">ICTST888</option>
+                <option value="course2">ICTST666</option>
+                <option value="course2">BSBTS888</option>
+                <option value="course2">BSBTS666</option>
+                
+            </select>
+            
     </div>
         <div class="form-group">
             <label for="course">Gender</label>
@@ -105,7 +114,6 @@
                 <option value="">--Please select a Gender</option>
                 <option value="course1">Male</option>
                 <option value="course2">Female</option>
-                <!-- Add more courses as needed -->
             </select>
         </div>
         <!-- Add more fields as required -->
