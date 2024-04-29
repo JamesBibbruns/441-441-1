@@ -45,6 +45,25 @@
         <p>Copyright &copy; 2024 James All rights reserved.</p>
     </footer>
     </footer>
-<script src="document.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+            const images = ['e.jpg', 'C.jpg', 'O.jpg']; // 图片路径数组
+            let index = 0;
+
+            function changeImage() {
+                index = (index + 1) % images.length;
+                const imageUrl = images[index];
+                const bannerImage = document.querySelector('.banner-image');
+                bannerImage.style.transform = 'translateX(-100%)'; // 滑出动画
+                setTimeout(function () {
+                    bannerImage.src = imageUrl;
+                    bannerImage.style.transform = 'translateX(0)'; // 滑入动画
+                }, 800); // 设置与CSS中的过渡时间一致
+            }
+
+            setInterval(changeImage, 2000); // 图片轮换间隔时间（毫秒）
+        });
+
+</script>
 </body>  
 </html>
