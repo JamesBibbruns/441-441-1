@@ -125,18 +125,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Function to initialize the event listeners for the add buttons
-function init() {
+function init623() {
   const addButtons = document.querySelectorAll('.add');
   addButtons.forEach(button => {
-    button.addEventListener('click', addToCart);
+    button.addEventListener('click', addToCart623);
   });
 
   // Event listener for the Clear Cart button
-  document.querySelector('.Clear').addEventListener('click', clearCart);
+  document.querySelector('.Clear').addEventListener('click', clearCart623);
 }
 
 // Function to add a course to the cart
-function addToCart(event) {
+function addToCart623(event) {
   event.preventDefault();
   // Get the parent course div
   const courseDiv = event.target.closest('.course');
@@ -156,11 +156,11 @@ function addToCart(event) {
   `;
 
   // Update the total
-  updateTotal();
+  updateTotal623();
 }
 
 // Function to update the total cost in the cart
-function updateTotal() {
+function updateTotal623() {
   let total = 0;
   const rows = document.querySelectorAll('.shopping-cart table tr');
   rows.forEach(row => {
@@ -174,11 +174,12 @@ function updateTotal() {
 }
 
 // Function to clear the cart
-function clearCart() {
+function clearCart623() {
   const table = document.querySelector('.shopping-cart table');
   table.innerHTML = '<tr></tr>'; // Clear the table rows
   document.querySelector('.total').textContent = 'Total: $00.00'; // Reset the total
 }
 
 // Initialize the event listeners
-init();
+init623();
+
