@@ -183,3 +183,25 @@ function clearCart623() {
 // Initialize the event listeners
 init623();
 
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+            const images = ['e.jpg', 'C.jpg', 'O.jpg']; 
+            let index = 0;
+
+            function changeImage() {
+                index = (index + 1) % images.length;
+                const imageUrl = images[index];
+                const bannerImage = document.querySelector('.banner-image');
+                bannerImage.style.transform = 'translateX(-100%)'; 
+                setTimeout(function () {
+                    bannerImage.src = imageUrl;
+                    bannerImage.style.transform = 'translateX(0)'; 
+                }, 800); 
+            }
+
+            setInterval(changeImage, 2000); 
+        });
+
