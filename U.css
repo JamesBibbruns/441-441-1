@@ -447,7 +447,27 @@ main {
 
 
 
-.login{
-    position: relative;
-    right: 0;
+/* Style for the login link */
+.login-link {
+    float: right; /* Aligns the link to the right side of the nav */
+    background-color: #007bff; /* Background color for the login link */
+    color: white; /* Text color for the login link */
+    padding: 10px 15px; /* Padding around the text */
+    text-decoration: none; /* Removes underline from the link */
+    border-radius: 5px; /* Rounded corners for the link */
+    margin-top: 10px; /* Adds space at the top */
+    margin-right: 20px; /* Adds space on the right side */
+}
+
+/* Hover effect for the login link */
+.login-link:hover {
+    background-color: #0056b3; /* Darker background on hover */
+    text-decoration: none; /* Ensures no underline on hover */
+}
+
+/* Clearfix for the nav to ensure it only contains its child elements' margins, not its own */
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
 }
