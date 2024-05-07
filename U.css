@@ -86,7 +86,9 @@ padding: 10px 20px;
 text-decoration: none;
 color: #333;
 }
-
+nav{
+  background-color: grey;
+}
 .dropdown-menu {
 display: none;
 position: absolute;
