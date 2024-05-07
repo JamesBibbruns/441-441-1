@@ -202,6 +202,6 @@ init623();
                 }, 800); 
             }
 
-            setInterval(changeImage, 10000); 
+            setInterval(changeImage, 60000); 
         });
 
