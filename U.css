@@ -361,7 +361,7 @@ main {
     background-color: wheat;
     padding: 20px 0;
     text-align: center; /* Centers the user1 div horizontally */
-    height:60%;
+    height:600px;
   }
   
   /* User login container styling */
