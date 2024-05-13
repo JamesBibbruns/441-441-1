@@ -7,22 +7,26 @@
     <link rel="stylesheet" href="U.css"> <!-- Link to style file -->  
 </head>  
 <body>   
+    <!-- Banner -->
     <div id="website-banner" style="background-color: #f2f2f2; padding: 10px; text-align: center;">
         <h2>Welcome to Our Website</h2>
         <p>Explore our courses and become an expert today!</p>
     </div>
-    <img src="1.png" alt="" style="width: 100px;height: 100px;position: relative;top: 0;left: 0;margin: 0;">
-    <a href="login.html" class="login-link">Login&Sign up</a>
+    <!-- Image -->
+    <img src="1.png" alt="Descriptive text for the image" style="width: 100px; height: 100px; position: relative; top: 0; left: 0; margin: 0;">
+    <!-- Login Link -->
+    <a href="login.html" class="login-link">Login & Sign up</a>
+    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li class="dropdown">
-            <a href="#">Project</a>
-            <ul class="dropdown-menu">
-                <li><a href="page2.html">Project 1</a></li>
-                <li><a href="page3.html">Project 2</a></li>
-                <li><a href="page1.html">Project 3</a></li>
-            </ul>
+                <a href="#">Project</a>
+                <ul class="dropdown-menu">
+                    <li><a href="page2.html">Project 1</a></li>
+                    <li><a href="page3.html">Project 2</a></li>
+                    <li><a href="page1.html">Project 3</a></li>
+                </ul>
             </li>
             <li><a href="page6.html">About</a></li>
             <li><a href="page9.html">Courseware</a></li>
@@ -30,31 +34,28 @@
             <li><a href="page7.html">Showcase</a></li>
         </ul>
     </nav>
-        <div class="hero-banner">
-            <!-- Imagery -->
-            <img src="e.jpg" alt="Descriptive text for the image">
-    
-            <div class="hero-text">
-                <!-- Headline -->
-                <h1>Elevate Your Brand</h1>
-                <!-- Subheading -->
-                <p>With Our Proven Strategies</p>
-    
-                <!-- Call to Action Button -->
-                <a href="page2.html" class="hero-btn">Discover More</a>
-            </div>
-
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <img src="e.jpg" alt="Descriptive text for the image">
+        <div class="hero-text">
+            <h1>Elevate Your Brand</h1>
+            <p>With Our Proven Strategies</p>
+            <a href="page2.html" class="hero-btn">Discover More</a>
+        </div>
+    </div>
+    <!-- Registration Form -->
     <div class="registration-form">
         <h2>Registration</h2>
-        <form action="#" method="post">
+        <form action="your-server-endpoint" method="post">
             <input type="text" id="name" name="name" placeholder="Name" required>
             <button type="submit">Register</button>
         </form>
     </div>
+    <!-- Footer -->
     <footer>
         <p>Copyright &copy; 2024 James All rights reserved.</p>
     </footer>
-<script src="document.js">
-</script>
+    <!-- External JavaScript File -->
+    <script src="document.js"></script>
 </body>  
 </html>
