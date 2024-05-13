@@ -9,7 +9,7 @@ document.getElementById('login-btn').addEventListener('click', function() {
     };  
   
     if (username === user.username && password === user.password) {  
-        window.location.href = 'shop.html';  
+        window.location.href = 'page9.html';  
     } else {  
         alert('Invalid username or password');  
     }  
