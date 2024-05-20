@@ -456,7 +456,6 @@ article p {
     font-weight: bolder; /* Changed from font-size to font-weight */
     position: absolute;
     right: 10px; /* Positions the link 10 pixels from the right edge of the page */
-    top: 10px; /* Positions the link 10 pixels from the top of the page */
     font-size: 25px; /* Sets the font size */
 }
 
