@@ -454,9 +454,10 @@ article p {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bolder; /* Changed from font-size to font-weight */
-    margin-right: 20px; /* Add some space between image and login link */
-    postion:absolute;
-    right:0;
+    position: absolute;
+    right: 10px; /* Positions the link 10 pixels from the right edge of the page */
+    top: 10px; /* Positions the link 10 pixels from the top of the page */
+    font-size: 25px; /* Sets the font size */
 }
 
 /* Hover effect for the login link */
