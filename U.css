@@ -661,13 +661,6 @@ nav:after {
     padding: 20px;
 }
 
-button {
-    border: none;
-    border-radius: 5px;
-    font-size: 1.5em;
-    cursor: pointer;
-    padding: 10px;
-}
 
 button:hover {
     background-color: #d0d0d0;
