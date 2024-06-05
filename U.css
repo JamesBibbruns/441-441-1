@@ -642,6 +642,7 @@ nav:after {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
+    margin-left: 35%;
 }
 
 #display {
@@ -661,7 +662,6 @@ nav:after {
 }
 
 button {
-    background-color: #f0f0f0;
     border: none;
     border-radius: 5px;
     font-size: 1.5em;
