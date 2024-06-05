@@ -40,10 +40,31 @@
         <input type="text" id="new-task" placeholder="Add a new task...">
         <button onclick="addTask()">Add Task</button>
         <ul id="task-list">
-            <li>123</li>
+            <li>We are always here to help you take the next step in your IT education journey</li>
         </ul>
     </div>
+    <div class="calculator">
+       <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button onclick="append('+')">+</button>
+            <button onclick="append('4')">4</button>    
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('-')">-</button>
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button onclick="append('*')">*</button>
+            <button onclick="append('0')">0</button>
+            <button onclick="append('.')">.</button>
+            <button onclick="calculate()">=</button>
 
+            <button onclick="clearDisplay()">C</button>
+        </div>
+    </div>
     <article class="our-team">
       <h3>Our Team</h3>
       <p>Led by a team of experienced educators and IT professionals, IT School is more than just a training provider; we are a community of learners and innovators. Our instructors are not only experts in their fields but are also passionate about sharing their knowledge and inspiring the next generation of IT professionals.</p>
