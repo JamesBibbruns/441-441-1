@@ -6,54 +6,12 @@
 <title>Enquiry Form - [RTO Name]</title>
 <link rel="stylesheet" href="U.css">
 <style>
-    body { font-family: Arial, sans-serif; }
-    .form-container { max-width: 600px; margin: auto; padding: 20px; }
-    .form-group { margin-bottom: 15px; }
-    label { display: block; margin-bottom: 5px; }
-    input[type="text"],
-    input[type="email"],
-    select { width: 100%; padding: 10px; margin-bottom: 10px; }
-    .error { color: red; }
-    button { padding: 10px 20px; cursor: pointer; }
 </style>
-<script>
-    // Add your JavaScript here for form validation
-    function validateForm() {
-        var hasError = false;
-        var errorMessages = "";
-
-        var name = document.forms["enquiryForm"]["name"].value;
-        if (name == "") {
-            hasError = true;
-            errorMessages += "Please enter your name.\n";
-        }
-
-        var email = document.forms["enquiryForm"]["email"].value;
-        if (email == "") {
-            hasError = true;
-            errorMessages += "Please enter your email.\n";
-        } else {
-            // Simple email validation regex
-            var emailPattern = /\S+@\S+\.\S+/;
-            if (!emailPattern.test(email)) {
-                hasError = true;
-                errorMessages += "Please enter a valid email address.\n";
-            }
-        }
-
-        // More validation checks can be added here for other fields
-
-        if (hasError) {
-            alert(errorMessages);
-            return false;
-        }
-        return true;
-    }
-</script>
+<script src="document.js"></script>
 </head>
 <body>
     <header>  
-        <h1>Enquiry Form</h1>
+        <h1>Enquiry Form-Register</h1>
     </header>  
     <img src="1.png" alt="" style="width: 100px;height: 100px;position: relative;top: 0;left: 0;margin: 0;">
     <a href="login.html" class="login-link">Login&Sign up</a>
