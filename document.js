@@ -122,3 +122,37 @@ function performCalculation(operator, a, b) {
             return;
     }
 }
+
+
+    // Add your JavaScript here for form validation
+    function validateForm() {
+        var hasError = false;
+        var errorMessages = "";
+
+        var name = document.forms["enquiryForm"]["name"].value;
+        if (name == "") {
+            hasError = true;
+            errorMessages += "Please enter your name.\n";
+        }
+
+        var email = document.forms["enquiryForm"]["email"].value;
+        if (email == "") {
+            hasError = true;
+            errorMessages += "Please enter your email.\n";
+        } else {
+            // Simple email validation regex
+            var emailPattern = /\S+@\S+\.\S+/;
+            if (!emailPattern.test(email)) {
+                hasError = true;
+                errorMessages += "Please enter a valid email address.\n";
+            }
+        }
+
+        // More validation checks can be added here for other fields
+
+        if (hasError) {
+            alert(errorMessages);
+            return false;
+        }
+        return true;
+    }
