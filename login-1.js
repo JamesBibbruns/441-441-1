@@ -1,28 +1,30 @@
-// Function to set the username in a cookie
 function setUsername() {
     const usernameInput = document.getElementById('usernameInput').value.trim();
     if (usernameInput !== '') {
         setCookie('username', usernameInput, 7); // Set cookie with name "username" lasting 7 days
-        alert(`Username "${usernameInput}" has been register.`);
+        alert(`Username "${usernameInput}" has been registered.`);
     } else {
         alert('Please enter a valid username.');
     }
 }
+
 document.addEventListener('DOMContentLoaded', function() {
     getUsername(); 
 });
+
 // Function to retrieve and display the username from the cookie
 function getUsername() {
     const username = getCookie('username');
     if (username !== '') {
-        document.getElementById('usernameDisplay').textContent = `login-Username: ${username}`;
-        window.location.href = 'index-1.html'; 
+        if (window.location.pathname !== '/index-1.html') {
+            window.location.href = 'index-1.html'; 
+        } else {
+            document.getElementById('usernameDisplay').textContent = `login-Username: ${username}`;
+        }
     } else {
-        document.getElementById('someElementId').textContent =' Guest' ;
+        document.getElementById('someElementId').textContent = 'Guest';
     }
 }
-
-
 
 // Function to set a cookie with a specified name, value, and expiration time
 function setCookie(cookieName, cookieValue, expirationDays) {
