@@ -16,7 +16,7 @@ function getUsername() {
     const username = getCookie('username');
     if (username !== '') {
         document.getElementById('usernameDisplay').textContent = `login-Username: ${username}`;
-        window.location.href = 'index.html'; 
+        window.location.href = 'index-1.html'; 
     } else {
         document.getElementById('someElementId').textContent =' Guest' ;
     }
