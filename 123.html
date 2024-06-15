@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* Styling for the cookieInfo div */
+#cookieInfo {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Styling for labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Styling for input fields */
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Styling for buttons */
+button {
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styling for the second button */
+button:last-of-type {
+  background-color: #ffc107;
+}
+
+button:last-of-type:hover {
+  background-color: #e0a800;
+}
+
+/* Align buttons in a row */
+#cookieInfo button {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#cookieInfo button:last-of-type {
+  margin-right: 0;
+}
+    </style>
+</head>
+<body>
+    <header>  
+        <h1>You are<span id="someElementId"></span><span id="usernameDisplay"></span></h1>
+    </header>  
+    <div id="cookieInfo">
+        <label for="usernameInput">Username:</label> 
+        <input type="text" id="usernameInput" placeholder="Name"> 
+        <label for="usernameInput">pass:</label> 
+        <input type="password" placeholder="Pass"> 
+        <button onclick="setUsername()">Register</button> 
+        <button onclick="getUsername()">Login</button> 
+    </div>
+<footer>
+    <p>Copyright &copy; 2024 James All rights reserved.</p>
+</footer>
+<script src="login-1.js"></script>
+</body>
+</html>
