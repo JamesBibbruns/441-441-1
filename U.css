@@ -773,3 +773,10 @@ button:last-of-type:hover {
 #cookieInfo button:last-of-type {
   margin-right: 0;
 }
+
+
+    .logo-account {
+    display: flex;          /* Enable flex context */
+    align-items: center;    /* Vertically center the content */
+    justify-content: space-between; /* Place the items with space between them */
+    }
