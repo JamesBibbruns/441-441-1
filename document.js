@@ -208,7 +208,7 @@ function setCookie(name, value, days) {
 
 
 
-    function validateForm() {
+   function validateForm() {
         // Get form elements
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
@@ -238,6 +238,6 @@ function setCookie(name, value, days) {
 
         // If all validations pass
         alert('Form submitted successfully!');
-        return true;
+        window.location.href = 'index-1.html';
+        return false; // Prevent default form submission
     }
-
