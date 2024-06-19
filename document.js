@@ -204,3 +204,40 @@ function setCookie(name, value, days) {
   function eraseCookie(name) {
     document.cookie = name + "=; max-age=0";
   }
+
+
+
+
+    function validateForm() {
+        // Get form elements
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const course = document.getElementById('course').value;
+        const age = document.getElementById('age').value;
+        const major = document.getElementById('major').value;
+        const gender = document.getElementById('gender').value;
+
+        // Basic validation checks
+        if (!name || !email || !course || !age || !major || !gender) {
+            alert('Please fill in all required fields.');
+            return false;
+        }
+
+        // Age validation
+        if (age < 1 || age > 100) {
+            alert('Please enter a valid age between 1 and 100.');
+            return false;
+        }
+
+        // Email validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address.');
+            return false;
+        }
+
+        // If all validations pass
+        alert('Form submitted successfully!');
+        return true;
+    }
+
