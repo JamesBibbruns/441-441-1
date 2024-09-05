@@ -169,52 +169,50 @@ function performCalculation(operator, a, b) {
     }
 
 
-function setUsername() {
-    const usernameInput = document.getElementById('usernameInput').value.trim();
-    if (usernameInput !== '') {
-        setCookie('username', usernameInput, 7); // Set cookie with name "username" lasting 7 days
-        alert(`Username "${usernameInput}" has been register.`);
-    } else {
-        alert('Please enter a valid username.');
-    }
-}
-document.addEventListener('DOMContentLoaded', function() {
-    getUsername(); 
-});
-// Function to retrieve and display the username from the cookie
-function getUsername() {
-    const username = getCookie('username');
-    if (username !== '') {
-        document.getElementById('usernameDisplay').textContent = `login-Username: ${username}`;
-        window.location.href = 'index.html'; 
-    } else {
-        document.getElementById('someElementId').textContent =' Guest' ;
-    }
-}
+ // Check and display the username or guest
+        document.addEventListener('DOMContentLoaded', function() {
+            displayUsername(); // Display the username if logged in
 
+            // Add event listener to the "Courseware" link
+            document.getElementById('coursewareLink').addEventListener('click', function(event) {
+                const username = getCookie('username');
+                if (!username) {
+                    event.preventDefault(); // Prevent the link from redirecting
+                    alert('Please register');
+                    window.location.href = 'login.html'; // Redirect to the registration/login page
+                }
+            });
+        });
 
-
-// Function to set a cookie with a specified name, value, and expiration time
-function setCookie(cookieName, cookieValue, expirationDays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000));
-    const expires = "expires=" + d.toUTCString();
-    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
-}
-
-// Function to get the value of a cookie by its name
-function getCookie(cookieName) {
-    const name = cookieName + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookieArray = decodedCookie.split(';');
-    for (let i = 0; i < cookieArray.length; i++) {
-        let cookie = cookieArray[i];
-        while (cookie.charAt(0) === ' ') {
-            cookie = cookie.substring(1);
+        // Display username or guest in the "user-info" section
+        function displayUsername() {
+            const username = getCookie('username');
+            const userInfoDiv = document.getElementById('user-info');
+            if (username) {
+                userInfoDiv.innerHTML = `Welcome, ${username}`;
+            } else {
+                userInfoDiv.innerHTML = `<a href="login.html" class="login-link">Login & Sign up</a>`;
+            }
         }
-        if (cookie.indexOf(name) === 0) {
-            return cookie.substring(name.length, cookie.length);
+
+        // Set a cookie
+        function setCookie(cookieName, cookieValue, expirationDays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000)); // Expiration time
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
         }
-    }
-    return "";
-}
+
+        // Get a cookie by name
+        function getCookie(cookieName) {
+            const name = cookieName + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const cookieArray = decodedCookie.split(';');
+            for (let i = 0; i < cookieArray.length; i++) {
+                let cookie = cookieArray[i].trim();
+                if (cookie.indexOf(name) === 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
+            }
+            return "";
+        }
