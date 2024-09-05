@@ -221,3 +221,17 @@ function performCalculation(operator, a, b) {
 function redirectToRegister() {
   window.location.href = 'Register.html';
 }
+
+function register() {
+    const username = document.getElementById('usernameInput').value;
+    const password = document.getElementById('passwordInput').value;
+
+    // You can add your registration logic here
+    if (username && password) {
+        // Assuming registration is successful, redirect to login page
+        alert("Registration successful!");
+        window.location.href = 'login.html'; // Redirects to the login page
+    } else {
+        alert("Please enter a valid username and password.");
+    }
+}
