@@ -164,7 +164,7 @@ function performCalculation(operator, a, b) {
 
         // If all validations pass
         alert('Form submitted successfully!');
-        window.location.href = 'index-1.html';
+        window.location.href = 'index.html';
         return false; // Prevent default form submission
     }
 
@@ -186,7 +186,7 @@ function getUsername() {
     const username = getCookie('username');
     if (username !== '') {
         document.getElementById('usernameDisplay').textContent = `login-Username: ${username}`;
-        window.location.href = 'index-1.html'; 
+        window.location.href = 'index.html'; 
     } else {
         document.getElementById('someElementId').textContent =' Guest' ;
     }
