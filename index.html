@@ -70,58 +70,8 @@
 
     <!-- Footer -->
     <footer>
-        <p>Copyright &copy; 2024 James. All rights reserved.</p>
+        <p>Copyright &copy; 2024 IT School. All rights reserved.</p>
     </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // Check and display the username or guest
-        document.addEventListener('DOMContentLoaded', function() {
-            displayUsername(); // Display the username if logged in
-
-            // Add event listener to the "Courseware" link
-            document.getElementById('coursewareLink').addEventListener('click', function(event) {
-                const username = getCookie('username');
-                if (!username) {
-                    event.preventDefault(); // Prevent the link from redirecting
-                    alert('Please register');
-                    window.location.href = 'login.html'; // Redirect to the registration/login page
-                }
-            });
-        });
-
-        // Display username or guest in the "user-info" section
-        function displayUsername() {
-            const username = getCookie('username');
-            const userInfoDiv = document.getElementById('user-info');
-            if (username) {
-                userInfoDiv.innerHTML = `Welcome, ${username}`;
-            } else {
-                userInfoDiv.innerHTML = `<a href="login.html" class="login-link">Login & Sign up</a>`;
-            }
-        }
-
-        // Set a cookie
-        function setCookie(cookieName, cookieValue, expirationDays) {
-            const d = new Date();
-            d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000)); // Expiration time
-            const expires = "expires=" + d.toUTCString();
-            document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
-        }
-
-        // Get a cookie by name
-        function getCookie(cookieName) {
-            const name = cookieName + "=";
-            const decodedCookie = decodeURIComponent(document.cookie);
-            const cookieArray = decodedCookie.split(';');
-            for (let i = 0; i < cookieArray.length; i++) {
-                let cookie = cookieArray[i].trim();
-                if (cookie.indexOf(name) === 0) {
-                    return cookie.substring(name.length, cookie.length);
-                }
-            }
-            return "";
-        }
-    </script>
+<script src="document.js"></script>
 </body>  
 </html>
