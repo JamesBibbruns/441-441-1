@@ -235,3 +235,16 @@ function register() {
         alert("Please enter a valid username and password.");
     }
 }
+
+function getUsername() {
+    const username = document.getElementById('usernameInput').value;
+    const password = document.getElementById('passwordInput').value;
+
+    // Simple validation (you can enhance this with actual login logic)
+    if (username && password) {
+        alert(`Welcome, ${username}!`);
+        window.location.href = 'index.html';  // Redirects to index.html
+    } else {
+        alert("Please enter a valid username and password.");
+    }
+}
