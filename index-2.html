@@ -12,53 +12,105 @@
         <h2>Welcome to Our Website</h2>
         <p>Explore our courses and become an expert today!</p>
     </div>
-    <div class="logo-account">
-        <!-- Image -->
-        <img src="1.png" alt="Descriptive text for the image" style="width: 100px; height: 100px; position: relative; top: 0; left: 0; margin: 0;">
-        <!-- Login Link -->
-        <a href="login.html" class="login-link">Login&Sign up</a>
-        <!-- Navigation -->
-    </div>
-    <nav>
 
+    <!-- Logo and Account Section -->
+    <div class="logo-account">
+        <!-- Logo Image -->
+        <img src="1.png" alt="Website Logo" style="width: 100px; height: 100px; position: relative; top: 0; left: 0; margin: 0;">
+        
+        <!-- Username Display or Login Link -->
+        <div id="user-info">
+            <a href="login.html" class="login-link">Login & Sign up</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page9.html" id="coursewareLink">Courseware</a></li>
+        </ul>
     </nav>
+
     <!-- Hero Banner -->
     <div class="hero-banner">
-        <div class= 'container-2'>
+        <div class="container-2">
             <div class="container_content">
-            <div class="container_content_inner">
-            <div class="title">
-                <h1>Choose your courses</h1>
-                
-            </div>
-            <div class="par">
-                <h2>Improve yourself</h2>
-            </div>
-            <div class="btns">
-                <a href="login.html" class="login-link">Login&Sign up</a>
-            </div>
-            </div>
+                <div class="container_content_inner">
+                    <div class="title">
+                        <h1>Choose your courses</h1>
+                    </div>
+                    <div class="par">
+                        <h2>Improve yourself</h2>
+                    </div>
+                    <div class="btns">
+                        <a href="login.html" class="login-link">Login & Sign up</a>
+                    </div>
+                </div>
             </div>
             <div class="container_outer_img">
-            <div class="img-inner">
-            <img src='e.jpg'  alt="" class="container_img"/>
-                </div>
+                <div class="img-inner">
+                    <img src='e.jpg' alt="Course Image" class="container_img" />
                 </div>
             </div>
-            <div class="overlay"></div>
+        </div>
+        <div class="overlay"></div>
     </div>
-    <!-- Registration Form -->
-    <div class="registration-form">
-        <h2>Registration</h2>
-        <form action="your-server-endpoint" method="post">
-            <input type="text" id="name" name="name" placeholder="Name" required>
-        </form>
-    </div>
+
     <!-- Footer -->
     <footer>
-        <p>Copyright &copy; 2024 James All rights reserved.</p>
+        <p>Copyright &copy; 2024 James. All rights reserved.</p>
     </footer>
-    <!-- External JavaScript File -->
-    <script src="document.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Check and display the username or guest
+        document.addEventListener('DOMContentLoaded', function() {
+            displayUsername(); // Display the username if logged in
+
+            // Add event listener to the "Courseware" link
+            document.getElementById('coursewareLink').addEventListener('click', function(event) {
+                const username = getCookie('username');
+                if (!username) {
+                    event.preventDefault(); // Prevent the link from redirecting
+                    alert('Please register');
+                    window.location.href = 'login.html'; // Redirect to the registration/login page
+                }
+            });
+        });
+
+        // Display username or guest in the "user-info" section
+        function displayUsername() {
+            const username = getCookie('username');
+            const userInfoDiv = document.getElementById('user-info');
+            if (username) {
+                userInfoDiv.innerHTML = `Welcome, ${username}`;
+            } else {
+                userInfoDiv.innerHTML = `<a href="login.html" class="login-link">Login & Sign up</a>`;
+            }
+        }
+
+        // Set a cookie
+        function setCookie(cookieName, cookieValue, expirationDays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000)); // Expiration time
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+        }
+
+        // Get a cookie by name
+        function getCookie(cookieName) {
+            const name = cookieName + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const cookieArray = decodedCookie.split(';');
+            for (let i = 0; i < cookieArray.length; i++) {
+                let cookie = cookieArray[i].trim();
+                if (cookie.indexOf(name) === 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
+            }
+            return "";
+        }
+    </script>
 </body>  
 </html>
