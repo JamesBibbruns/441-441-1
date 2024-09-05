@@ -216,3 +216,8 @@ function performCalculation(operator, a, b) {
             }
             return "";
         }
+
+
+function redirectToRegister() {
+  window.location.href = 'Register.html';
+}
